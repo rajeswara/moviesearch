@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-12">
+        <form>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Enter A Moviename..." name="username" [(ngModel)]="username" (keyup)="searchUser()">    
+            </div>    
+        </form>    
+    </div>
+</div>
+
+<div *ngIf="user">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{user.Title}}</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="profile-img img-thumbnail" src="{{user.Poster}}">
+                    
+                </div>   
+                <div class="col-md-8">
+                   
+                    <br>
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Title: </strong>{{user.Title}}</li> 
+                        <li class="list-group-item"><strong>Year: </strong>{{user.Year}}</li>
+                        <li class="list-group-item"><strong>Genre: </strong>{{user.Genre}}</li>
+                        <li class="list-group-item"><strong>Plot: </strong>{{user.Plot}}</li>
+                        <li class="list-group-item"><strong>Language: </strong>{{user.Language}}</li>
+                        <li class="list-group-item"><strong>Country: </strong>{{user.Country}}</li>   
+                        <li class="list-group-item"><strong>Metascore: </strong>{{user.Metascore}}</li>   
+                        <li class="list-group-item"><strong>imdbRating: </strong>{{user.imdbRating}}</li>   
+                    </ul>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
